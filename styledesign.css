@@ -1,0 +1,1669 @@
+*{
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+.container{
+    width:100%;
+    height:650px;
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow: hidden;
+    background: black;
+}
+
+.slide{
+    display: none;
+}
+
+.label{
+    width: 15px;
+    height: 15px;
+    border-radius:50%;
+    border: 2px solid white;
+    background: transparent;
+    display: block;  
+    z-index: 5;
+    margin-top:500px;
+    margin-left:20px;
+}
+
+.slide:checked+.label{
+    background:white;
+    border: 2px solid white;
+}
+
+
+.slide:not(:checked)+.label+.content{
+	opacity:0;
+	transition:opacity 0.35x;
+    pointer-events:none;
+    transition: 2s;
+}
+
+.slide:checked+.label+.content{
+    animation:slide 2s;	
+}
+
+
+@keyframes slide{
+	0%{transform:translatex(100%);}
+	
+	100%{transform:translatex(0);}
+}
+
+
+.content{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    animation:cont 3s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes cont{
+	0%{transform:translateX(100%);}
+	
+	100%{transform:translateX(0);}
+}
+
+.content img{
+    height: 100%;
+    width: 100%;
+}
+   
+
+.nav{
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    z-index: 5;
+    position: absolute;
+    top:0;
+    justify-content: space-around;
+    display: flex;
+
+}
+
+.nav img{
+    width: 7%;
+}
+
+.nav ul{
+    display: flex;
+    width:60%;
+    color:white !important; 
+    justify-content: space-around;
+    align-items:center;
+    background: transparent;
+   
+}
+
+.nav ul li:hover{
+  color: yellow;  
+}
+
+
+.box{
+    height: 150px;
+    width: 90%;
+    background: transparent;
+    display: flex;
+    position: absolute;
+    top:600px;
+    left:70px;
+}
+
+.box .box1{
+    width:30%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 .in1{
+    width: 140px;
+    height: 60px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: default;
+}
+
+
+.box1 .icn1{
+    width: 40px;
+    height: 40px;
+    background: orange;
+    box-sizing: border-box;
+    padding-top:11px;
+    font-size:20px;
+    padding-left: 16px;
+}
+
+.icn1 .fa{
+    color: black;
+}
+
+
+.box .box2{
+    width:30%;
+    height: 100%;
+    background:gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box2 .in2{
+    width: 140px;
+    height: 37px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 10px;
+    cursor: default;
+}
+
+.box2 .icn2{
+    width: 40px;
+    height: 40px;
+    background: black;
+    box-sizing: border-box;
+    padding-top:11px;
+    font-size:20px;
+    padding-left: 16px;
+}
+
+.icn2 .fa{
+    color:orange;
+}
+
+.box .box3{
+    width:30%;
+    height: 100%;
+    background: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box3 .in3{
+    width: 140px;
+    height: 60px;
+    font-weight: bold;   
+    font-size: 30px;
+    margin-left: 10px;
+    cursor: default;
+}
+
+
+.box3 .icn3{
+    width: 40px;
+    height: 40px;
+    background: black;
+    box-sizing: border-box;
+    padding-top:11px;
+    font-size:20px;
+    padding-left: 16px;
+}
+
+.icn3 .fa{
+     color:orange;
+}
+
+.box .box4{
+    width:30%;
+    height: 100%;
+    background: khaki;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box4 .in4{
+    width: 190px;
+    height: 37px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 10px;
+    cursor: default;
+}
+
+.box4 .icn4{
+    width: 40px;
+    height: 40px;
+    background: black;
+    box-sizing: border-box;
+    padding-top:11px;
+    font-size:20px;
+    padding-left: 16px;
+}
+
+.icn4 .fa{
+    color:orange;
+}
+.second{
+    width: 100%;
+    height: 500px;
+    background: white;
+    display: flex;
+}
+
+.about{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+
+.about h1{
+    font-size:30px;
+    cursor: default;
+}
+.about p{
+    width: 90%;
+    align-items: justify;
+    font-size: 20px;
+}
+
+.about .butn{
+    width: 150px;
+    height:50px;
+    background: black;
+    display: flex;
+    padding: 1px;
+}
+
+.butn button{
+    width: 100px;
+    height: 100%;
+    background:black;
+    color: white;
+    border: none;
+}
+
+.butn .icn5{
+    width: 30px;
+    height: 30px;
+    background: orange;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding-top:8px;
+    padding-left: 10px;
+}
+
+.butn:hover{
+    transform: scale(1.1);
+}
+
+.about1{
+    width: 40%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.rotate{
+    width: 130px;
+    height: 130px;
+    border: 5px solid gold;
+    transform:rotate(50deg);
+}
+
+.about1 h1{
+    font-size: 180px;
+    position: absolute;
+    cursor: default;
+}
+
+.about1 h2{
+    font-size: 100px;
+   position: absolute;
+    top:330px;
+    cursor: default;
+}
+
+.our{
+    width: 100%;
+    background: black;
+    padding:1px;
+    position:relative;
+    height:180vh;
+   
+}
+
+.our h1{
+    color: white;
+    font-weight: bold;
+    font-size:40px;
+   margin:4%;
+}
+
+.our .pic1{
+    width: 550px;
+    height: 650px;
+    position: relative;
+    transition:1s;
+    left:2%;
+
+}
+
+.pic1 img{
+   height: 100%;
+   width: 100%;
+}
+
+.pic1:hover{
+    cursor: crosshair;
+    opacity: 0.7;
+   transition:1s;
+}
+
+.pic2{
+    width: 699px;
+    height: 200px;
+    position:absolute;
+    top:14%;
+    right:2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.pic2 img:hover{
+    cursor: crosshair;
+    opacity: 0.5;
+   transition:1s;
+}
+
+.pic2-1{
+    width:215px;
+    height: 200px;
+}
+
+
+.pic3{
+    width: 580px;
+    height: 200px;
+    position:relative;
+    left:1%;
+    top:20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pic3 img:hover{
+    cursor: crosshair;
+    opacity: 0.5;
+   transition:1s;
+}
+
+.pic3 img{
+    width:167px;
+}
+
+.pic4{
+    width: 690px;
+    height: 650px;
+    position:absolute;
+    right:2%;
+    top:33%;
+}
+
+.pic4 img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.pic4 img:hover{
+    cursor: crosshair;
+    opacity: 0.5;
+   transition:1s;
+}
+
+
+.amazing{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+
+.amazing .dot1{
+    width: 50%;
+    height: 85vh;
+    font-size: 25px;
+    display: flex;    
+    justify-content: flex-end;
+    letter-spacing: 15px;
+    line-height: 0.7;
+    position: relative;
+    cursor: default;
+}
+
+.dot1 img{
+    width: 70%;
+    height: 85%;
+    position: absolute;
+    right:14%;
+    top:10%;
+}
+
+.amazing .dot2{
+    width: 45%;
+    height: 85vh;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.amazing .dot2 h1{
+    cursor: default;
+}
+
+.dot2 .butn1{
+    width: 190px;
+    height: 50px;
+    background:black;
+    display: flex;
+    align-items: center;
+}
+
+.butn1 button{
+    width: 140px;
+    height: 100%;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    border: none;
+
+}
+
+.butn1 .spot{
+    width: 30px;
+    height: 32px;
+    background: orange;
+    line-height: 0.2;
+    padding-left: 7px;
+    cursor: default;
+}
+
+.kitchen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.kitchen .dot3{
+    width: 45%;
+    height: 99vh;
+    font-size: 30px;  
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.kitchen .dot3 h1{
+    cursor: default;
+}
+.kitchen .check{
+    width: 90%;
+    height: 20%;
+}
+
+.check ul li {
+ float: left;
+ margin: 10px;
+cursor: default;
+}
+
+.check ul li i{
+   color: rgb(255, 193, 77);
+}
+
+
+.dot3 .butn2{
+    width: 190px;
+    height: 50px;
+    background:black;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.butn2 button{
+    width: 140px;
+    height: 100%;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    border: none;
+}
+
+.butn2 .spot{
+    width: 30px;
+    height: 32px;
+    background: orange;
+    line-height: 0.2;
+    padding-left: 3px; 
+    cursor: default;  
+}
+
+.kitchen .dot4{
+    width: 45%;
+    height: 90vh;
+    font-size: 25px;
+    display: flex;    
+    justify-content: flex-start;
+     letter-spacing: 15px;
+    line-height: 0.7;
+    position: relative;
+    cursor: default;
+}
+
+.dot4 img{
+    width: 70%;
+    height: 85%;
+    position: absolute;
+    left: 12%;
+    top:10%;
+}
+
+.servis{
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+.servis h5{
+    width: 100%;
+    height: 10%;
+    font-size: 50px;
+    color: goldenrod;
+    background: black;
+    text-align: center;
+    cursor: default;
+}
+
+.servis ul{
+    width: 100%;
+    height: 89%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    transition: 0.5s;
+    background-image: url(img-2.jpg);
+    background-size: 100% 100%;
+}
+
+.servis ul:hover li{
+    width: 10%; 
+}
+
+.servis ul li{
+    list-style: none;
+    width: 20%;
+    height: 100%;
+    background: orange;
+    border-left: 1px solid black;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.5s;
+  
+}
+
+.servis ul li:hover{
+    content: hover;
+    width: 60%; 
+    transition: 0.5s;
+}
+
+
+.servis ul li:nth-child(1)::after{
+	content:'Interior Design';
+	display:block;
+	height:57%;
+	width:100%;
+	position:absolute;
+	text-align:center;
+	padding-top:150px;
+	font-size:50px;
+	top:0;	
+    transition:1s;
+}
+
+.servis ul li:nth-child(1):hover::after{
+	left:0;
+    background: transparent;
+    color: orange;
+}
+
+.servis ul li:nth-child(2)::after{
+	content:'Home Decoration';
+	display:block;
+	height:57%;
+	width:100%;
+	position:absolute;
+	text-align:center;
+	padding-top:150px;
+	font-size:30px;
+	top:0;	
+    transition:1s;
+    font-size: 50px;
+}
+
+.servis ul li:nth-child(2):hover::after{
+	left:0;
+    background: transparent;
+    color: orange;
+}
+
+.servis ul li:nth-child(3)::after{
+	content:'Exterior Design';
+	display:block;
+	height:57%;
+	width:100%;
+	position:absolute;
+	text-align:center;
+	padding-top:150px;
+	font-size:30px;
+	top:0;	
+    transition:1s;
+    font-size: 50px;
+}
+
+.servis ul li:nth-child(3):hover::after{
+	left:0;
+    background: transparent;
+    color: orange;
+}
+
+.servis ul li:nth-child(4)::after{
+	content:'kitchen Design';
+	display:block;
+	height:57%;
+	width:100%;
+	position:absolute;
+	text-align:center;
+	padding-top:150px;
+	font-size:30px;
+	top:0;	
+    transition:1s;
+    font-size: 50px;
+}
+
+.servis ul li:nth-child(4):hover::after{
+	left:0;
+    background: transparent;
+    color: orange;
+}
+
+.servis ul li:nth-child(5)::after{
+	content:'contact Us!';
+	display:block;
+	height:57%;
+	width:100%;
+	position:absolute;
+	text-align:center;
+	padding-top:150px;
+	font-size:30px;
+	top:0;	
+    transition:1s;
+    font-size: 50px;
+}
+
+.servis ul li:nth-child(5):hover::after{
+	left:0;
+    background: transparent;
+    color: orange;
+}
+
+.servis ul li .write{
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition:2s;
+}
+.servis ul li:nth-child(1){
+    background: orange;
+}
+
+.servis ul li:nth-child(1):hover{
+    background-image: url(img-11.jpg);
+    background-size: 100% 100%;
+}
+
+.servis ul li:nth-child(2){
+    background:orange;
+}
+
+.servis ul li:nth-child(2):hover{
+    background-image: url(img-4.jpg);
+    background-size: 100% 100%;
+}
+
+.servis ul li:nth-child(3){
+    background:orange;
+}
+
+.servis ul li:nth-child(3):hover{
+    background-image: url(img-5.jpg);
+    background-size: 100% 100%;
+}
+
+.servis ul li:nth-child(4){
+    background:orange;
+}
+
+.servis ul li:nth-child(4):hover{
+    background-image: url(img-3.jpg);
+    background-size: 100% 100%;
+}
+
+.servis ul li:nth-child(5){
+    background:orange;
+}
+
+.servis ul li:nth-child(5):hover{
+   background: black;
+}
+
+.servis ul li:hover .write{
+    transition-delay: 0.5s;  
+    opacity: 1;
+    top:200px;
+}
+
+.write h1{  
+    color: orange;
+    font-size: 40px;
+}
+
+.write p{
+   font-weight: bold;
+}
+
+.write button{
+    width: 150px;
+    height: 40px;
+    background: orange;
+    font-size: 20px;
+}
+
+
+
+
+.team{
+    width: 100%;
+    height: 90vh;
+    background: transparent;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.team .team1{
+    width: 25%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-wrap:wrap;
+    align-content: space-around;
+}
+
+.team1 h1{
+    font-size: 40px;
+    color: orange;
+    cursor: default;
+}
+
+.team1 p{
+    font-size: 20px;;
+}
+
+.team1 .butn3{
+    width: 150px;
+    height: 50px;
+    background: black;
+    display: flex;
+    
+}
+
+.team .butn3:hover{
+    transform: scale(1.1);
+}
+
+.team1 .butn3 button{
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 17px;  
+}
+
+
+.team1 .butn3 .fa{
+    color:white;
+    width: 35px;
+    height: 30px;
+    margin-top:10px;    
+    background: orange;
+    padding: 6px 9px;
+}
+
+.team .team2{
+    width: 62%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team2 .man1{
+    width: 30%;
+    height: 70%;
+    background: black;
+}
+
+.man1 .bx1 {
+    width: 80%;
+    height: 60%;
+    position:relative;
+    overflow: hidden;
+    background-image: url(m3.jpg);
+    background-size: 100% 100%;
+    margin-top:10%;
+    margin-left:10%;
+}
+
+.bx1 .icn{
+    width: 20%;
+    height: 80%;
+    background: black;
+    margin-top: 15%;
+    position: relative;
+    left:-20%;
+}
+
+.bx1:hover .icn{
+    left:0%;
+    transition-duration: 1s;
+}
+
+
+.bx1 .icn ul li{
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top:15px;
+    color: orange;
+    margin-left: 10px;
+}
+ 
+.bx1 .icn ul li:nth-child(2){
+    top:65px;  
+}
+
+.bx1 .icn ul li:nth-child(3){
+    top:110px;  
+}
+
+.bx1 .icn ul li:nth-child(4){
+    top:155px;  
+}
+
+.man1 h1{
+    color: orange;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: default;
+}
+
+.man1 h2{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: lighter;
+    cursor: default;
+}
+
+
+
+.team2 .man2{
+    width: 30%;
+    height: 70%;
+    background: black;
+}
+
+.man2 .bx2 {
+    width: 80%;
+    height: 60%;
+    position:relative;
+    overflow: hidden;
+    background-image: url(m5.jpg);
+    background-size: 100% 100%;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.bx2 .icn{
+    width: 20%;
+    height: 80%;
+    background: black;
+    margin-top: 15%;
+    position: relative;
+    left:-20%;
+}
+
+.bx2:hover .icn{
+    left:0%;
+    transition-duration: 1s;
+}
+
+.bx2 .icn ul li{
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top:15px;
+    color: orange;
+    margin-left: 10px;
+}
+
+.bx2 .icn ul li:nth-child(2){
+    top:65px;  
+}
+
+.bx2 .icn ul li:nth-child(3){
+    top:110px;  
+}
+
+.bx2 .icn ul li:nth-child(4){
+    top:155px;  
+}
+
+
+.man2 h1{
+    color: orange;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: default;
+}
+
+.man2 h2{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: lighter;
+    cursor: default;
+}
+
+
+
+
+.team2 .man3{
+    width: 30%;
+    height: 70%;
+    background: black;
+}
+
+.man3 .bx3{
+    width: 80%;
+    height: 60%;
+    position:relative;
+    overflow: hidden;
+    background-image: url(m1.jpg);
+    background-size: 100% 100%;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.bx3 .icn{
+    width: 20%;
+    height: 80%;
+    background: black;
+    margin-top: 15%;
+    position: relative;
+    left:-20%;
+}
+
+.bx3:hover .icn{
+    left:0%;
+    transition-duration: 1s;
+}
+
+.bx3 .icn ul li{
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top:15px;
+    color: orange;
+    margin-left: 10px;
+}
+
+.bx3 .icn ul li:nth-child(2){
+    top:65px;  
+}
+
+.bx3 .icn ul li:nth-child(3){
+    top:110px;  
+}
+
+.bx3 .icn ul li:nth-child(4){
+    top:155px;  
+}
+
+.man3 h1{
+    color: orange;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: default;
+}
+
+.man3 h2{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: lighter;
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+.shop{
+    width: 100%;
+    height: 129vh;
+    background: white;
+}
+
+.shop h1{
+    margin-top:30px;
+    font-size:40px;
+    text-align:center;
+    cursor: default;
+}
+
+.shop .all{
+    width: 100%;
+    height:90%;
+    background: transparent;
+    position: relative;
+}
+
+.all .line{
+    width: 1px;
+    height:20%;
+    border:1px solid orange;
+    margin-left: 650px;
+}
+
+.all .dots{
+    width: 90%;
+    height: 500px;
+    background: transparent;
+    letter-spacing: 15px;
+    font-size: 25px;
+    line-height: 0.7;
+    cursor: default;    
+}
+
+.all .pic{
+    width: 93%;
+    height: 580px;
+    background-image: url(slide1.jpg);
+    background-size: 100% 100%;
+    position: absolute;
+    top:220px;
+    left: 55px;
+    animation-name:next;
+	animation-iteration-count:infinite;
+	animation-duration:10s;
+	animation-delay:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes next{
+	0%{background-image:url(img-1.jpg);}
+	25%{background-image:url(img-2.jpg);}
+	50%{background-image:url(img-3.jpg);}
+	75%{background-image:url(img-4.jpg);}
+	100%{background-image:url(img-5.jpg);}
+}
+
+
+
+
+.project{
+    width: 100%;
+    height:50vh;
+    background: black;
+    display: flex;
+}
+  
+.project .proj1{
+    width: 30%;
+    height: 100%; 
+    background: orange;
+    position: relative;
+    cursor: default;
+}
+
+.proj1 h1{
+    font-size: 150px;
+    color: black;
+    font-weight: lighter;
+}
+
+.proj1 span{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;  
+    margin-top: 135px;
+}
+
+.project .proj2{
+    width: 24%;
+    height: 100%;
+    background: black;
+    position: relative;
+}
+
+.proj2 h1{
+    font-size: 70px;
+    color: orange;
+    text-align: center;
+    margin-top: 100px;
+    font-weight: lighter;
+    cursor: default;
+}
+
+.proj2 h2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.project .proj3{
+    width: 23%;
+    height: 100%;
+    background: black;
+}
+
+
+.proj3 h1{
+    font-size: 70px;
+    color: orange;
+    text-align: center;
+    margin-top: 100px;
+    font-weight: lighter;
+    cursor: default;
+}
+
+.proj3 h2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.project .proj4{
+    width: 23%;
+    height: 100%;
+    background: black;
+}
+
+.proj4 h1{
+    font-size: 70px;
+    color: orange;
+    text-align: center;
+    margin-top: 100px;
+    font-weight: lighter;
+    cursor: default;
+}
+
+.proj4 h2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+
+
+
+.footer{
+    width: 100%;
+    height: 110vh;
+    border: 3px solid  transparent;
+    position: relative;
+}
+
+
+.footer .main{
+    width: 100%;
+    height: 500px;
+    background: orange;
+    margin-top:210px;
+    padding: 1px;
+  
+}
+
+
+.footer .top{
+    width: 200px;
+    height: 310px;
+    background: black;
+    position: absolute;
+    top: 100px;
+    left: 580px;
+}
+
+.top img{
+    width: 100px;
+    margin-top: 160px;
+    margin-left: 45px;
+}
+
+.main .social{
+    width: 45%;
+    height: 60px;
+    margin-top: 300px;
+    margin-left: 450px;
+   
+}
+
+.social .icn1{
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    padding: 15px;
+    color: white;
+}
+
+.social .icn1 .fab{
+    color: white;
+    padding: 15px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.4s;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.social .icn1 .fab:hover{
+     transform: rotate(360deg);
+     color: orange;
+     box-shadow: 2px 2px 24px #ffff;
+ }
+
+.social .icn1::before{
+    content:" facebook";
+	display:block;
+	width:70px;
+	height:20px;
+	background:black;
+	position:absolute; 
+	opacity:0;
+    text-align: center;
+} 
+
+.social .icn1:hover::before{
+	opacity: 1;
+    top:-80%;
+    left: -10px;
+    color: white;
+    overflow: hidden;
+    transition: 2s;
+}
+
+
+
+.social .icn2{
+    width: 50px;
+    height: 50px;
+    background: black;
+    position: relative;
+    padding: 15px;
+    color: white;
+    border-radius: 50%;
+    left: 100px;
+    top:-50px;
+}
+
+.social .icn2 .fab{
+    color: white;
+    padding: 15px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.4s;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.social .icn2 .fab:hover{
+     transform: rotate(360deg);
+     color: orange;
+     box-shadow: 2px 2px 24px #ffff;
+ }
+
+.social .icn2::before{
+    content:" twitter";
+	display:block;
+	width:70px;
+	height:20px;
+	background:black;
+	position:absolute; 
+	opacity:0;
+    text-align: center;
+} 
+
+.social .icn2:hover::before{
+	opacity: 1;
+    top:-80%;
+    left: -10px;
+    color: white;
+    overflow: hidden;
+    transition: 2s;
+}
+
+
+
+.social .icn3{
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    padding: 15px;
+    color: white;
+    left: 200px;
+    top:-100px;
+}
+
+.social .icn3 .fab{
+    color: white;
+    padding: 15px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.4s;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.social .icn3 .fab:hover{
+     transform: rotate(360deg);
+     color: orange;
+     box-shadow: 2px 2px 24px #ffff;
+ }
+
+.social .icn3::before{
+    content:"instagram";
+	display:block;
+	width:70px;
+	height:20px;
+	background:black;
+	position:absolute; 
+	opacity:0;
+    text-align: center;
+} 
+
+.social .icn3:hover::before{
+	opacity: 1;
+    top:-80%;
+    left: -10px;
+    color: white;
+    overflow: hidden;
+    transition: 2s;
+}
+
+
+
+.social .icn4{
+    width: 50px;
+    height: 50px;
+    background: black;
+    position: relative;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+    left: 300px;
+    top:-150px;
+}
+
+.social .icn4 .fab{
+    color: white;
+    padding: 15px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.4s;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.social .icn4 .fab:hover{
+     transform: rotate(360deg);
+     color: orange;
+     box-shadow: 2px 2px 24px #ffff;
+ }
+
+.social .icn4::before{
+    content:"youtube";
+	display:block;
+	width:70px;
+	height:20px;
+	background:black;
+	position:absolute; 
+	opacity:0;
+    text-align: center;
+} 
+
+.social .icn4:hover::before{
+	opacity: 1;
+    top:-80%;
+    left: -10px;
+    color: white;
+    overflow: hidden;
+    transition: 2s;
+}
+
+
+.social .icn5{
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    padding: 15px;
+    color: white;
+    left: 400px;
+    top:-200px;
+    box-shadow: -5px 5px 0px 7px black;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) ;
+}
+
+.social .icn5:hover{
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+}
+
+.social .icn5 .fa{
+    color: white;
+    padding: 15px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 1s;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.social .icn5 .fa:hover{
+     transform: rotate(360deg);
+     color: orange;
+     /* box-shadow: 2px 2px 24px 5px black; */
+     box-shadow: 2px 2px 24px #ffff;
+ }
+
+.social .icn5::before{
+    content:"E-mail";
+	display:block;
+	width:70px;
+	height:20px;
+	background:black;
+	position:absolute; 
+	opacity:0;
+    text-align: center;
+} 
+
+.social .icn5:hover::before{
+	opacity: 1;
+    top:-80%;
+    left: -10px;
+    color: white;
+    overflow: hidden;
+    transition: 2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social .icn6{
+    width: 50px;
+    height: 50px;
+    background: black;
+    position: relative;
+    padding: 15px;
+    color: white;
+    left: 500px;
+    top:-250px;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) ;
+}
+
+.social .icn6:hover{
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+    box-shadow: -20px 20px 10px 10px black;
+ 
+}
+
+.social .icn6 .fa{
+    color: white;
+    padding: 15px 15px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    transition: all 0.4s;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.social .icn6 .fa:hover{
+     transform: rotate(360deg);
+     color: orange;
+     /* box-shadow: 2px 2px 24px #ffff; */
+    
+ }
+
+
+.social .icn6::before{
+    content:"";
+	display:block;
+	width:15px;
+	height:100%;
+	background:black;
+	position:absolute; 
+    text-align: center;
+    transform:  skewy(-45deg) ;
+    top:8;
+    left: -15;
+   
+    border-top:1px solid white;
+    border-left:1px solid white;
+} 
+
+
+.social .icn6::after{
+    content:"";
+	display:block;
+	width:96%;
+	height:15px;
+    background:black;
+    border-left: 1px solid white;
+    border-bottom:1px solid white;
+    border-right:2px solid white;
+	position:absolute; 
+    text-align: center;
+    transform:  skew(-45deg) ;
+     top:50;
+     left: -8;
+} 
+
+
+
